@@ -82,9 +82,8 @@ EDITOR=nvim visudo
 
 # Enable multilib
 echo "Enabling multilib..."
-read -p "Pres [ENTER] and uncomment the multilib section"
-nvim /etc/pacman.conf
-pacman -Syuu
+echo "[multilib]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 # Enable lightdm
 systemctl enable lightdm
