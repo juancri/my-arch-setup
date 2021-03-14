@@ -12,7 +12,6 @@ pikaur -S \
     alttab-git \
     google-chrome \
     polybar \
-    reaper-bin \
     visual-studio-code-bin \
     zoom \
     grun
