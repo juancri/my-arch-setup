@@ -1,0 +1,32 @@
+#! /bin/sh
+
+# Auto start
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
+compton &
+gnome-keyring-daemon --start --components=ssh &
+# nitrogen --restore &
+synapse --startup &
+feh --bg-fill ~/wallpapers/wallpaper.jpg
+xsetroot -cursor_name left_ptr &
+polybar -c ~/.config/bspwm/polybar main &
+plank &
+alttab -d 1 &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config focused_border_color \#E84F4F
+bspc config border_width         3 
+bspc config window_gap          12
+bspc config bottom_padding 44 
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Plank layer=above manage=on border=off
+
