@@ -53,6 +53,10 @@ pacman -S \
     xterm \
     youtube-dl
 
+# Update pkgfile database
+echo "Updating pkgfile database..."
+pkgfile -u
+
 # Video drivers
 # Intel
 lspci | grep -i vga | grep -i intel
