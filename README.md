@@ -22,6 +22,6 @@ All the programs I use in my desktop setup
 
 - `install.sh`: Installs the base system (should be run from the live USB/DVD)
 - `install2.sh`: Setups the base system (should be run from arch-chroot)
-- `install3.sh`: Setups the base system after reboot (should be run as root after a reboot)
+- `install3.sh`: Setups the base system (should be run as root after a reboot)
 - `install4.sh`: Setups the user environment (should be run as a user after a reboot)
 
