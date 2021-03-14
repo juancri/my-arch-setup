@@ -11,11 +11,13 @@ pacman -S \
     bspwm \
     deluge \
     deluge-gtk \
+    feh \
     ffmpeg \
     firefox \
     gcolor2 \
     git \
     github-cli \
+    gnome-keyring \
     gnome-screenshot \
     gparted \
     htop \
@@ -24,10 +26,13 @@ pacman -S \
     jq \
     lightdm \
     lightdm-gtk-greeter \
+    man \
+    mate-terminal \
     mc \
     meld \
     mpv \
     neovim \
+    openssh \
     pandoc \
     pavucontrol \
     pinta \
@@ -35,11 +40,28 @@ pacman -S \
     plank \
     pulseaudio \
     pulseaudio-alsa \
+    sxhkd \
     speedtest-cli \
     sudo \
     synapse \
+    tldr \
     virtualbox \
-    virtualbox-host-dkms
+    virtualbox-host-dkms \
+    xorg-server \
+    xorg-apps \
+    xorg-xinit \
+    xterm \
+    youtube-dl
+
+# Video drivers
+# Intel
+lspci | grep -i vga | grep -i intel
+IS_INTEL=$?
+if test ${IS_INTEL} -eq 0
+then
+	echo "Installing intel drivers..."
+	pacman -S xf86-video-intel
+fi
 
 # Create a user
 echo "Creating a new user..."
@@ -60,4 +82,6 @@ read -p "Pres [ENTER] and uncomment the multilib section"
 nvim /etc/pacman.conf
 pacman -Syuu
 
+# Enable lightdm
+systemctl enable lightdm
 
