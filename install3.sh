@@ -86,5 +86,11 @@ echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 # Enable lightdm
+echo "Enabling lightdm..."
 systemctl enable lightdm
+
+# Run the rest as a user
+echo "Running the rest as ${NEW_USER}..."
+cp install4.sh /home/${NEW_USER}/
+runuser -u "${NEW_USER}" -- /home/${NEW_USER}/install4.sh
 
