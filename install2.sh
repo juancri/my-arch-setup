@@ -59,4 +59,5 @@ echo "Enabling network manager..."
 systemctl enable NetworkManager
 
 echo "Done! Ready for reboot."
+echo "After reboot, run ./install3.sh"
 
