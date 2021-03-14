@@ -25,13 +25,19 @@ passwd
 
 # Install boot loader
 echo "Installing the boot loader..."
-pacman -S grub
 if [ -d /sys/firmware/efi ]
 then
 	echo "Detected EFI system..."
-	grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=grub
+	pacman -S grub efibootmgr
+	lsblk
+	read -p "Select your efi partition: " EFI_PARTITION
+	echo "Mounting EFI partition..."
+	mkdir -p /boot/efi
+	mount "/dev/${EFI_PARTITION}" /boot/efi
+	grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch
 else
 	echo "Detected BIOS system..."
+	pacman -S grub
 	while true
 	do
 		read -p "Enter your disk device (eg: sda): " DISK_DEV
