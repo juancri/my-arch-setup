@@ -47,8 +47,10 @@ echo "Generating fstab..."
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Copy install script
-echo "Copying install script..."
-cp ./install2.sh /mnt/root/install2.sh
+echo "Copying install scripts..."
+cp ./install2.sh /mnt/root/
+cp ./install3.sh /mnt/root/
+cp ./install4.sh /mnt/root/
 
 # Chroot
 echo "Chrooting into /mnt..."
