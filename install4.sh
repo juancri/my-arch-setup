@@ -9,7 +9,6 @@ makepkg -si
 
 # Install AUR packages
 pikaur -S \
-    alttab-git \
     google-chrome \
     polybar \
     visual-studio-code-bin \

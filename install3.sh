@@ -39,7 +39,6 @@ pacman -S \
     pavucontrol \
     pinta \
     pkgfile \
-    plank \
     pulseaudio \
     pulseaudio-alsa \
     sxhkd \
