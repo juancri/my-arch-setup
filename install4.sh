@@ -11,6 +11,7 @@ makepkg -si
 pikaur -S \
     google-chrome \
     polybar \
+    siji \
     visual-studio-code-bin \
     zoom \
     grun
