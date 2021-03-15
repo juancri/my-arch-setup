@@ -4,13 +4,11 @@
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
 compton &
 gnome-keyring-daemon --start --components=ssh &
-# nitrogen --restore &
 synapse --startup &
 feh --bg-fill ~/wallpapers/wallpaper.jpg
 xsetroot -cursor_name left_ptr &
 polybar -c ~/.config/bspwm/polybar main &
-plank &
-alttab -d 1 &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 

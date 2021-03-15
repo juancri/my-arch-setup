@@ -33,6 +33,7 @@ pacman -S \
     meld \
     mpv \
     neovim \
+    noto-fonts-emoji \
     openssh \
     pandoc \
     pavucontrol \
@@ -46,8 +47,10 @@ pacman -S \
     sudo \
     synapse \
     tldr \
+    ttf-joypixels \
     virtualbox \
     virtualbox-host-dkms \
+    xfce4-notifyd \
     xorg-server \
     xorg-apps \
     xorg-xinit \
