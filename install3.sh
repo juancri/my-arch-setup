@@ -8,6 +8,7 @@ echo "Installing packages..."
 pacman -S \
     aws-cli \
     base-devel \
+    bind \
     bspwm \
     deluge \
     deluge-gtk \
