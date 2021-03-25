@@ -10,6 +10,7 @@ pacman -S \
     base-devel \
     bind \
     bspwm \
+    btrfs-progs \
     deluge \
     deluge-gtk \
     feh \
