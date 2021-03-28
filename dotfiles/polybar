@@ -102,7 +102,7 @@ label = %percentage_used%%
 type = internal/date
 interval = 1 
 
-date = " %a %Y-%m-%d"
+date = " %a %m/%d"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
@@ -117,14 +117,14 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume>
+label-volume = 🔊 %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
-bar-volume-width = 10
+bar-volume-width = 5
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -144,8 +144,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+format = <label>
+label = 💻
 
 bar-width = 10
 bar-indicator = |
