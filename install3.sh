@@ -34,6 +34,7 @@ pacman -S \
     meld \
     mpv \
     neovim \
+    nmap \
     noto-fonts-emoji \
     openssh \
     pandoc \
