@@ -1,0 +1,32 @@
+#! /bin/sh
+
+# Auto start
+~/.screenlayout/720.sh && sleep 1
+pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
+compton &
+gnome-keyring-daemon --start --components=ssh &
+synapse --startup &
+feh --bg-fill ~/wallpaper.jpg
+xsetroot -cursor_name left_ptr &
+ntfd &
+polybar -c ~/.config/bspwm/polybar main &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+flameshot &
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config focused_border_color \#4F87E8
+bspc config border_width         2 
+bspc config window_gap           8 
+bspc config bottom_padding 0 
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Synapse border=off
+
+bspc rule -a mpv state=floating rectangle=300x200+100+100
+bspc rule -a mpv layer=above
+bspc rule -a Gnome-calculator state=floating
+

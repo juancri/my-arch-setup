@@ -62,14 +62,23 @@ pacman -S \
 echo "Updating pkgfile database..."
 pkgfile -u
 
+# Load environment
+source ./env.sh
+
 # Video drivers
 # Intel
-lspci | grep -i vga | grep -i intel
-IS_INTEL=$?
 if test ${IS_INTEL} -eq 0
 then
 	echo "Installing intel drivers..."
 	pacman -S xf86-video-intel
+elif test ${IS_NVIDIA} -eq 0
+then
+	echo "Installing NVIDIA drivers..."
+	pacman -S nvidia
+else
+	echo "Video drivers cannot installed automatically"
+	lspci
+	read -p "Install the video drivers and press [ENTER]"
 fi
 
 # Create a user
@@ -96,6 +105,7 @@ systemctl enable lightdm
 
 # Run the rest as a user
 echo "Running the rest as ${NEW_USER}..."
+cp env.sh /home/${NEW_USER}/
 cp install4.sh /home/${NEW_USER}/
 runuser -u "${NEW_USER}" -- /home/${NEW_USER}/install4.sh
 
