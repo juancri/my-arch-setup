@@ -24,17 +24,27 @@ super + p
 super + e
     caja ~/Desktop
 
-# screenshot
+# screenshots
 Print
-    gnome-screenshot -i
+    flameshot full --path ~/Desktop
+super + Print
+    flameshot gui --path ~/Desktop
 
 # Move between desktops
 alt + control + {Left,Right}
     bspc desktop -f {prev,next}
 
-shift + alt + control + {Left,Right}
-    bspc node -d prev; \
-    bspc desktop -f {prev,next}
+shift + alt + control + Left
+    id=$(bspc query --nodes --node); \
+    bspc node --to-desktop prev; \
+    bspc desktop --focus prev; \
+    bspc node --focus ${id}
+
+shift + alt + control + Right
+    id=$(bspc query --nodes --node); \
+    bspc node --to-desktop next; \
+    bspc desktop --focus next; \
+    bspc node --focus ${id}
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -93,6 +103,8 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 super + {Left,Down,Up,Right}
 	bspc node -f {west,south,north,east}
+super + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
