@@ -99,6 +99,7 @@ EDITOR=nvim visudo
 echo "Enabling multilib..."
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+pacman -Sy
 
 # Enable lightdm
 echo "Enabling lightdm..."
