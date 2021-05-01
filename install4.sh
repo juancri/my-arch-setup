@@ -20,6 +20,14 @@ pikaur -S \
 echo "Installing bash git prompt..."
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
 
+# Install nodejs
+echo "Installing nodejs..."
+mkdir -p ~/src/node
+cd ~/src/node
+wget https://nodejs.org/dist/v14.16.1/node-v14.16.1-linux-x64.tar.xz
+tar xvf node-v14.16.1-linux-x64.tar.xz
+cd -
+
 # Load environment
 source ./env.sh
 
