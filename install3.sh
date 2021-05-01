@@ -52,6 +52,7 @@ pacman -S \
 	ttf-joypixels \
 	virtualbox \
 	virtualbox-host-dkms \
+	wget \
 	xfce4-notifyd \
 	xorg-server \
 	xorg-apps \
