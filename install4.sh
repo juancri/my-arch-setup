@@ -9,12 +9,12 @@ makepkg -si
 
 # Install AUR packages
 pikaur -S \
-    google-chrome \
-    polybar \
-    siji \
-    visual-studio-code-bin \
-    zoom \
-    grun
+	google-chrome \
+	polybar \
+	siji \
+	visual-studio-code-bin \
+	zoom \
+	grun
 
 # Install bash git prompt
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
