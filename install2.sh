@@ -52,12 +52,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Install network manager and tools
 echo "Installing network manager..."
 pacman -S \
-    networkmanager
+	networkmanager
 
 # Enable network manager
 echo "Enabling network manager..."
 systemctl enable NetworkManager
 
 echo "Done! Ready for reboot."
-echo "After reboot, run ./install3.sh"
-
+echo "After reboot, connect to the Internet by using nmtui and then run ./install3.sh"
