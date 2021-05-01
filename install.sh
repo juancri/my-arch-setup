@@ -52,6 +52,7 @@ cp ./install2.sh /mnt/root/
 cp ./install3.sh /mnt/root/
 cp ./install4.sh /mnt/root/
 cp ./env.sh /mnt/root/
+cp -R dotfiles /mnt/root/
 
 # Chroot
 echo "Chrooting into /mnt..."

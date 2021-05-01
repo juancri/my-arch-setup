@@ -6,58 +6,58 @@ pacman -Syuu
 # Install packages
 echo "Installing packages..."
 pacman -S \
-    aws-cli \
-    base-devel \
-    bind \
-    bspwm \
-    btrfs-progs \
-    deluge \
-    deluge-gtk \
-    feh \
-    ffmpeg \
-    firefox \
-    flameshot \
-    gcolor2 \
-    git \
-    github-cli \
-    gnome-keyring \
-    gnome-screenshot \
-    gparted \
-    htop \
-    httpie \
-    imagemagick \
-    jq \
-    lightdm \
-    lightdm-gtk-greeter \
-    man \
-    mate-terminal \
-    mc \
-    meld \
-    mpv \
-    neovim \
-    nmap \
-    noto-fonts-emoji \
-    openssh \
-    pandoc \
-    pavucontrol \
-    pinta \
-    pkgfile \
-    pulseaudio \
-    pulseaudio-alsa \
-    sxhkd \
-    speedtest-cli \
-    sudo \
-    synapse \
-    tldr \
-    ttf-joypixels \
-    virtualbox \
-    virtualbox-host-dkms \
-    xfce4-notifyd \
-    xorg-server \
-    xorg-apps \
-    xorg-xinit \
-    xterm \
-    youtube-dl
+	aws-cli \
+	base-devel \
+	bind \
+	bspwm \
+	btrfs-progs \
+	deluge \
+	deluge-gtk \
+	feh \
+	ffmpeg \
+	firefox \
+	flameshot \
+	gcolor2 \
+	git \
+	github-cli \
+	gnome-keyring \
+	gnome-screenshot \
+	gparted \
+	htop \
+	httpie \
+	imagemagick \
+	jq \
+	lightdm \
+	lightdm-gtk-greeter \
+	man \
+	mate-terminal \
+	mc \
+	meld \
+	mpv \
+	neovim \
+	nmap \
+	noto-fonts-emoji \
+	openssh \
+	pandoc \
+	pavucontrol \
+	pinta \
+	pkgfile \
+	pulseaudio \
+	pulseaudio-alsa \
+	sxhkd \
+	speedtest-cli \
+	sudo \
+	synapse \
+	tldr \
+	ttf-joypixels \
+	virtualbox \
+	virtualbox-host-dkms \
+	xfce4-notifyd \
+	xorg-server \
+	xorg-apps \
+	xorg-xinit \
+	xterm \
+	youtube-dl
 
 # Update pkgfile database
 echo "Updating pkgfile database..."
@@ -109,5 +109,5 @@ systemctl enable lightdm
 echo "Running the rest as ${NEW_USER}..."
 cp env.sh /home/${NEW_USER}/
 cp install4.sh /home/${NEW_USER}/
+cp -R dotfiles /home/${NEW_USER}/
 runuser -u "${NEW_USER}" -- /home/${NEW_USER}/install4.sh
-
