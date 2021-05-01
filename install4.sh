@@ -17,6 +17,7 @@ pikaur -S \
 	grun
 
 # Install bash git prompt
+echo "Installing bash git prompt..."
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
 
 # Load environment
