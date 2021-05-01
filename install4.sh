@@ -42,3 +42,10 @@ fi
 echo "Generating SSH key..."
 mkdir -p ~/.ssh
 ssh-keygen -f ~/.ssh/id_rsa -N ""
+
+# Configure git
+echo "Configuring git..."
+read -p "Enter your name:" FULLNAME
+read -p "Enter your email:" EMAIL
+git config --global user.name "${FULLNAME}"
+git config --global user.email "${EMAIL}"
