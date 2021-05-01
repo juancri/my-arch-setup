@@ -11,6 +11,7 @@ pacman -S \
 	bind \
 	bspwm \
 	btrfs-progs \
+	compton \
 	deluge \
 	deluge-gtk \
 	feh \
