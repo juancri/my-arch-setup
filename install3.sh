@@ -101,6 +101,10 @@ echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Sy
 
+# Enable time synchronization
+systemctl enable systemd-timesyncd.service
+systemctl start systemd-timesyncd.service
+
 # Enable lightdm
 echo "Enabling lightdm..."
 systemctl enable lightdm
