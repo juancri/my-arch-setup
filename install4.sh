@@ -36,15 +36,18 @@ source ./env.sh
 echo "Copying dot files..."
 cp ./dotfiles/bashrc ~/.bashrc
 mkdir -p ~/.config/bspwm
+mkdir -p ~/.config/ntfd
 if test ${IS_LAPTOP} -eq 0
 then
 	cp ./dotfiles/laptop/bspwmrc ~/.config/bspwm
 	cp ./dotfiles/laptop/polybar ~/.config/bspwm
 	cp ./dotfiles/laptop/sxhkdrc ~/.config/bspwm
+	cp ./dotfiles/laptop/ntfd.toml ~/.config/ntfd/config.toml
 else
 	cp ./dotfiles/desktop/bspwmrc ~/.config/bspwm
 	cp ./dotfiles/desktop/polybar ~/.config/bspwm
 	cp ./dotfiles/desktop/sxhkdrc ~/.config/bspwm
+	cp ./dotfiles/desktop/ntfd.toml ~/.config/ntfd/config.toml
 fi
 
 # Generate SSH key
