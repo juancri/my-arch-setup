@@ -43,11 +43,13 @@ then
 	cp ./dotfiles/laptop/polybar ~/.config/bspwm
 	cp ./dotfiles/laptop/sxhkdrc ~/.config/bspwm
 	cp ./dotfiles/laptop/ntfd.toml ~/.config/ntfd/config.toml
+	cp ./dotfiles/laptop/gtk.ini ~/.config/gtk-3.0/settings.ini
 else
 	cp ./dotfiles/desktop/bspwmrc ~/.config/bspwm
 	cp ./dotfiles/desktop/polybar ~/.config/bspwm
 	cp ./dotfiles/desktop/sxhkdrc ~/.config/bspwm
 	cp ./dotfiles/desktop/ntfd.toml ~/.config/ntfd/config.toml
+	cp ./dotfiles/laptop/gtk.ini ~/.config/gtk-3.0/settings.ini
 fi
 
 # Generate SSH key

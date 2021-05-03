@@ -6,6 +6,7 @@ pacman -Syuu
 # Install packages
 echo "Installing packages..."
 pacman -S \
+	adapta-gtk-theme \
 	aws-cli \
 	base-devel \
 	bind \
