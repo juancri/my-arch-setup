@@ -11,6 +11,7 @@ makepkg -si
 pikaur -S \
 	google-chrome \
 	grun \
+	ntfd-bin \
 	polybar \
 	siji \
 	visual-studio-code-bin \
