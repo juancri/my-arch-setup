@@ -10,11 +10,11 @@ makepkg -si
 # Install AUR packages
 pikaur -S \
 	google-chrome \
+	grun \
 	polybar \
 	siji \
 	visual-studio-code-bin \
-	zoom \
-	grun
+	zoom
 
 # Install bash git prompt
 echo "Installing bash git prompt..."
