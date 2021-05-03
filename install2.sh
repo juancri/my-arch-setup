@@ -18,6 +18,7 @@ hwclock --systohc
 echo "Setting locales..."
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+locale-gen
 
 # Set root password
 echo "Setting root password..."
