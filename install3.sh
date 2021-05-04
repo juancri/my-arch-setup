@@ -39,6 +39,7 @@ pacman -S \
 	meld \
 	mpv \
 	neovim \
+	network-manager-applet \
 	nmap \
 	noto-fonts-emoji \
 	openssh \
