@@ -28,8 +28,6 @@ pacman -S \
 	gcolor2 \
 	git \
 	github-cli \
-	gnome-keyring \
-	gnome-screenshot \
 	gparted \
 	htop \
 	httpie \

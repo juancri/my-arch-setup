@@ -10,11 +10,11 @@ super + KP_Enter
 
 # chrome
 super + c
-    google-chrome-stable --password-store=gnome
+    google-chrome-stable
 
 # whatsapp
 super + w
-    google-chrome-stable --password-store=gnome --new-window https://web.whatsapp.com
+    google-chrome-stable --new-window https://web.whatsapp.com
 
 # pavucontrol
 super + p
