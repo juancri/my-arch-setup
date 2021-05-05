@@ -1,4 +1,8 @@
 
+# Enable ILoveCandy
+echo "Enabling ILoveCandy..."
+echo "ILoveCandy" >> /etc/pacman.conf
+
 # Update system
 echo "Updating system..."
 pacman -Syuu
