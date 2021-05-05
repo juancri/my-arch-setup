@@ -35,6 +35,7 @@ pacman -S \
 	jq \
 	lightdm \
 	lightdm-gtk-greeter \
+	lshw \
 	man \
 	mate-terminal \
 	mc \
