@@ -110,6 +110,7 @@ echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 pacman -Sy
 
 # Enable time synchronization
+echo "Enabling time synchronization..."
 systemctl enable systemd-timesyncd.service
 systemctl start systemd-timesyncd.service
 
