@@ -36,6 +36,7 @@ pacman -S \
 	jq \
 	lightdm \
 	lightdm-gtk-greeter \
+	linux-headers \
 	lshw \
 	man \
 	mate-terminal \
