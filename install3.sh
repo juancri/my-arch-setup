@@ -33,6 +33,7 @@ pacman -S \
 	htop \
 	httpie \
 	imagemagick \
+	inetutils \
 	jq \
 	lightdm \
 	lightdm-gtk-greeter \
