@@ -28,6 +28,7 @@ pacman -S \
 	gcolor2 \
 	git \
 	github-cli \
+	gnumeric \
 	gparted \
 	htop \
 	httpie \
