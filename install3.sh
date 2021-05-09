@@ -65,6 +65,7 @@ pacman -S \
 	virtualbox \
 	virtualbox-host-dkms \
 	wget \
+	whois \
 	xfce4-notifyd \
 	xorg-server \
 	xorg-apps \
