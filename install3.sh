@@ -44,6 +44,7 @@ pacman -S \
 	mc \
 	meld \
 	mpv \
+	neofetch \
 	neovim \
 	network-manager-applet \
 	nmap \
