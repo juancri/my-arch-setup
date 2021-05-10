@@ -56,12 +56,14 @@ pacman -S \
 	pkgfile \
 	pulseaudio \
 	pulseaudio-alsa \
+	simplescreenrecorder \
 	sxhkd \
 	speedtest-cli \
 	sudo \
 	synapse \
 	tldr \
 	ttf-joypixels \
+	usbutils \
 	virtualbox \
 	virtualbox-host-dkms \
 	wget \
