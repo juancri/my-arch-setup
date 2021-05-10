@@ -28,5 +28,5 @@ bspc rule -a Synapse border=off
 
 bspc rule -a mpv state=floating rectangle=300x200+100+100
 bspc rule -a mpv layer=above
-bspc rule -a Gnome-calculator state=floating
+bspc rule -a Galculator state=floating
 

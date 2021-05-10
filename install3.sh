@@ -25,6 +25,7 @@ pacman -S \
 	ffmpeg \
 	firefox \
 	flameshot \
+	galculator \
 	gcolor2 \
 	git \
 	github-cli \
