@@ -85,11 +85,11 @@ source ./env.sh
 
 # Video drivers
 # Intel
-if test ${IS_INTEL} -eq 0
+if test ${VIDEO_IS_INTEL} -eq 0
 then
 	echo "Installing intel drivers..."
 	pacman -S xf86-video-intel
-elif test ${IS_NVIDIA} -eq 0
+elif test ${VIDEO_IS_NVIDIA} -eq 0
 then
 	echo "Installing NVIDIA drivers..."
 	pacman -S nvidia
@@ -97,6 +97,23 @@ else
 	echo "Video drivers cannot installed automatically"
 	lspci
 	read -p "Install the video drivers and press [ENTER]"
+fi
+
+# Microcode
+# Intel
+if test ${CPU_IS_INTEL} -eq 0
+then
+	echo "Installing intel microcode..."
+	pacman -S intel-ucode
+elif test ${CPU_IS_AMD} -eq 0
+then
+	echo "Installing AMD microcode..."
+	pacman -S amd-ucode
+else
+	echo "CPU kind not found"
+	read -p "Press [ENTEL] to see the cpu info..."
+	cat /proc/cpuinfo
+	read -p "Install microcode and press [ENTER] to continue..."
 fi
 
 # Create a user

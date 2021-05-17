@@ -1,12 +1,19 @@
 
 # Video card
 lspci | grep -i vga | grep -i intel
-export IS_INTEL=$?
+export VIDEO_IS_INTEL=$?
 lspci | grep -i vga | grep -i nvidia
-export IS_NVIDIA=$?
+export VIDEO_IS_NVIDIA=$?
 
 # Computer kind
 hostnamectl status | grep Chassis | grep laptop
-export IS_LAPTOP=$?
+export KIND_IS_LAPTOP=$?
 hostnamectl status | grep Chassis | grep desktop
-export IS_DESKTOP=$?
+export KIND_IS_DESKTOP=$?
+
+# CPU
+cat /proc/cpuinfo |grep GenuineIntel
+export CPU_IS_INTEL=$?
+cat /proc/cpuinfo |grep AMD
+export CPU_IS_AMD=$?
+

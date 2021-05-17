@@ -37,7 +37,7 @@ echo "Copying dot files..."
 cp ./dotfiles/bashrc ~/.bashrc
 mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/ntfd
-if test ${IS_LAPTOP} -eq 0
+if test ${KIND_IS_LAPTOP} -eq 0
 then
 	cp ./dotfiles/laptop/bspwmrc ~/.config/bspwm
 	cp ./dotfiles/laptop/polybar ~/.config/bspwm
