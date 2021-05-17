@@ -106,11 +106,20 @@ echo "Creating user: ${NEW_USER}..."
 useradd -m "${NEW_USER}"
 echo "Setting password for ${NEW_USER}..."
 passwd "${NEW_USER}"
+
+# Add user to sudo
 echo "Adding user ${NEW_USER} to wheel..."
 gpasswd -a "${NEW_USER}" wheel
 echo "Setting sudo to nopasswd..."
 read -p "Press [ENTER] and uncomment the line: %wheel ALL=(ALL) NOPASSWD: ALL"
 EDITOR=nvim visudo
+
+# Set user as autologin
+echo "Setting user as autologin..."
+groupadd -r autologin
+gpasswd -a ${NEW_USER} autologin
+read -p "Press [ENTER] and edit autologin-user under [Seat:*]"
+nvim /etc/lightdm/lightdm.conf
 
 # Enable multilib
 echo "Enabling multilib..."
