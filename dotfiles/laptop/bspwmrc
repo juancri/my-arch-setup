@@ -3,7 +3,7 @@
 # Auto start
 ~/.screenlayout/720.sh && sleep 1
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
-compton &
+picom &
 synapse --startup &
 feh --bg-fill ~/wallpaper.jpg
 xsetroot -cursor_name left_ptr &

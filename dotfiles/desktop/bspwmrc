@@ -2,7 +2,7 @@
 
 # Auto start
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
-compton &
+picom &
 synapse --startup &
 feh --bg-fill ~/wallpapers/wallpaper.jpg
 xsetroot -cursor_name left_ptr &

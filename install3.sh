@@ -17,7 +17,6 @@ pacman -S \
 	bspwm \
 	btrfs-progs \
 	caja \
-	compton \
 	eom \
 	deluge \
 	deluge-gtk \
@@ -53,6 +52,7 @@ pacman -S \
 	openssh \
 	pandoc \
 	pavucontrol \
+	picom \
 	pinta \
 	pkgfile \
 	pulseaudio \
