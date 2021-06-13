@@ -52,6 +52,7 @@ pacman -S \
 	openssh \
 	pandoc \
 	pavucontrol \
+	pdftk \
 	picom \
 	pinta \
 	pkgfile \
