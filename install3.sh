@@ -64,6 +64,7 @@ pacman -S \
 	sudo \
 	synapse \
 	tldr \
+	traceroute \
 	ttf-joypixels \
 	usbutils \
 	virtualbox \
