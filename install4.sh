@@ -32,6 +32,9 @@ cd -
 # Load environment
 source ./env.sh
 
+# Optional packages
+install_optional TeamViewer teamviewer
+
 # Copy dot files
 echo "Copying dot files..."
 cp ./dotfiles/bashrc ~/.bashrc

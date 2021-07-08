@@ -17,3 +17,15 @@ export CPU_IS_INTEL=$?
 cat /proc/cpuinfo |grep AMD
 export CPU_IS_AMD=$?
 
+install_optional() {
+	while true
+	do
+		read -p "Do you wish to install $1?" yn
+		case $yn in
+			[Yy]* ) pikaur $2; break;;
+			[Nn]* ) exit;;
+			* ) echo "Please answer yes or no.";;
+		esac
+	done
+}
+
