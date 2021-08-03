@@ -43,6 +43,7 @@ pacman -S \
 	mate-terminal \
 	mc \
 	meld \
+	mlocate \
 	mpv \
 	neofetch \
 	neovim \
