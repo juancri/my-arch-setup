@@ -9,6 +9,7 @@ makepkg -si
 
 # Install AUR packages
 pikaur -S \
+	cpufetch \
 	google-chrome \
 	grun \
 	nerd-fonts-dejavu-complete \
