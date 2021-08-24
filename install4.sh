@@ -11,7 +11,6 @@ makepkg -si
 pikaur -S \
 	google-chrome \
 	grun \
-	lsd \
 	nerd-fonts-dejavu-complete \
 	ntfd-bin \
 	polybar \

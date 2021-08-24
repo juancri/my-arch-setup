@@ -38,6 +38,7 @@ pacman -S \
 	lightdm \
 	lightdm-gtk-greeter \
 	linux-headers \
+	lsd \
 	lshw \
 	man \
 	mate-terminal \
